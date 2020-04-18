@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ARText" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="MGn-s9-Cyf" id="y3v-9V-YbR"/>
+                <outlet property="passwordTextField" destination="ryE-Ta-Vln" id="Nb1-vT-e8X"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレスを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGn-s9-Cyf">
+                    <rect key="frame" x="32" y="64" width="350" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワードを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryE-Ta-Vln">
+                    <rect key="frame" x="32" y="130" width="350" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="COY-2w-7S2">
+                    <rect key="frame" x="32" y="430" width="350" height="36"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3O-eU-diB">
+                            <rect key="frame" x="0.0" y="0.0" width="151" height="36"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="新規登録"/>
+                            <connections>
+                                <action selector="tapSignupButton:" destination="-1" eventType="touchUpInside" id="Rig-RC-4uz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gg-tw-iKC">
+                            <rect key="frame" x="199" y="0.0" width="151" height="36"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="ログイン"/>
+                            <connections>
+                                <action selector="tapLoginButton:" destination="-1" eventType="touchUpInside" id="LBS-a9-Ojw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPb-Li-1oZ">
+                    <rect key="frame" x="176" y="802" width="62" height="30"/>
+                    <state key="normal" title="利用規約"/>
+                    <connections>
+                        <action selector="tapTermsButton:" destination="-1" eventType="touchUpInside" id="lsU-j2-g8w"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="COY-2w-7S2" secondAttribute="trailing" constant="32" id="0Uf-so-z7I"/>
+                <constraint firstItem="ryE-Ta-Vln" firstAttribute="top" secondItem="MGn-s9-Cyf" secondAttribute="bottom" constant="32" id="Amr-KL-1ZR"/>
+                <constraint firstItem="COY-2w-7S2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="H6U-sa-M28"/>
+                <constraint firstItem="OPb-Li-1oZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JdK-TR-FlC"/>
+                <constraint firstItem="COY-2w-7S2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PZw-TR-lfI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OPb-Li-1oZ" secondAttribute="bottom" constant="64" id="Umq-Wd-lwc"/>
+                <constraint firstItem="ryE-Ta-Vln" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="YWC-k5-0Nt"/>
+                <constraint firstItem="MGn-s9-Cyf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="dND-kv-OR7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ryE-Ta-Vln" secondAttribute="trailing" constant="32" id="fKX-Ql-Rla"/>
+                <constraint firstItem="MGn-s9-Cyf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="kHJ-CE-aQR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MGn-s9-Cyf" secondAttribute="trailing" constant="32" id="qF8-T9-lnJ"/>
+                <constraint firstItem="COY-2w-7S2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="r68-Kr-MK9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-77" y="119"/>
+        </view>
+    </objects>
+</document>
